@@ -1,7 +1,8 @@
-console.log("¡Hola, mundo!");
-
-function hola(string: String) {
-  console.log("Hola" + string);
+enum Color {
+  Rojo = "Rojo",
+  Verde = "Verde",
+  Azul = "Azul",
 }
 
-hola("25");
+let favorito: Color = Color.Verde;
+console.log(favorito);
