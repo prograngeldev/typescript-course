@@ -30,7 +30,7 @@ class Animal {
   private vacunado: boolean;
 
   constructor(tipo: string, raza: string, edad: number, vacunado: boolean) {
-    this.tipo = tipo;
+    this.tipo = tipo; // this se refiere al objeto, this.tipo es la propiedad propia del objeto y no la del parametro. El valor que se le asigna viene del parametro.
     this.raza = raza;
     this.edad = edad;
     this.vacunado = vacunado;
