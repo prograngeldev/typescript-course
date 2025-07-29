@@ -1,24 +1,14 @@
-var perro = {
-    tipo: "Canino",
-    raza: "Pitbull",
-    edad: 3,
-    vacuna: true,
-};
-var vaca = {
-    tipo: "Bovino",
-    edad: 4,
-    vacuna: false
-};
-function animalInfo(animal) {
-    var vacunado;
-    if (animal.vacuna) {
-        vacunado = "si";
+var Animal = /** @class */ (function () {
+    function Animal(tipo, raza, edad, vacunado) {
+        this.tipo = tipo;
+        this.raza = raza;
+        this.edad = edad;
+        this.vacunado = vacunado;
     }
-    else {
-        vacunado = "no";
-    }
-    console.log("El animal es un ".concat(animal.tipo, " de ").concat(animal.edad, " a\u00F1os de edad y ").concat(vacunado, " esta vacunado"));
-}
-animalInfo({ tipo: "Felino", edad: 2, vacuna: true });
-animalInfo(perro);
-animalInfo(vaca);
+    Animal.prototype.comer = function () {
+        console.log("".concat(this.tipo, " de raza ").concat(this.raza, " est\u00E1 comiendo."));
+    };
+    return Animal;
+}());
+var perro = new Animal("Perro", "Labrador", 5, true);
+perro.comer();
